@@ -6,6 +6,7 @@ rm(list = ls( ))
 getwd()
 # Let's get the data
 ProjectData = read.csv("data/Boats.csv", sep=";", dec=",", header = TRUE)
+correlation_columns = 1:10
 ###
 # THis is the file where i have the main report for the project 
 docfile = "doc/report.Rmd"
@@ -18,3 +19,5 @@ docfile = "doc/report.Rmd"
 source("R/library.R")
 ## Generate the report
 rmarkdown::render(docfile, quiet = TRUE )
+
+tmp=cor(ProjectData[,correlation_columns])

@@ -4,11 +4,11 @@ author: "T. Evgeniou"
 output: html_document
 ---
 
-```{r eval = TRUE, echo=FALSE, error = FALSE, warning=FALSE,message=FALSE,results='asis', tidy=TRUE}
+```{r eval = TRUE, echo=TRUE, error = FALSE, warning=FALSE,message=FALSE,results='asis', tidy=TRUE}
 # BIG CODE CHUNK WITH ALL I WILL NEED (I WISH I HAD A CEO TO TELL ME ALL THIS)
 #source("../R/library.R")
 # Let's get the data
-#ProjectData = read.csv("../data/Boats.csv", sep=";", dec=",", header = TRUE)
+ProjectData <- read.csv("../data/Boats.csv", sep=";", dec=",", header = TRUE)
 ```
 
 
@@ -25,5 +25,7 @@ newfunction = function(x, y){
 ```
 
 my newfunction on the second number of the second column AND the first number of the second column is `r newfunction(ProjectData[2,2], ProjectData[1,2])`
+
+
 
 
